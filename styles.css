@@ -1,0 +1,95 @@
+html{    
+    scroll-behavior: smooth;
+}
+#navbar {
+    position: fixed; 
+    top: 0; /* Align it to the top of the viewport */
+    left: 0; /* Align it to the left */
+    width: 400px; /* Set the fixed width */
+    height: 100vh; /* Full viewport height */
+    background-color: white; /* Ensure background color to cover content */
+    border-right: 1px solid rgba(0, 22, 22, 0.4); /* Right border */
+    z-index: 100; /* Ensure it is above the content */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+}
+
+#content {
+    margin-left: 400px; /* Add margin to prevent overlapping with navbar */
+    padding: 20px; /* Add padding for internal spacing */
+    position: relative; /* Ensure normal document flow */
+    min-height: 100vh; /* Ensure content area takes up the full height */
+}
+
+
+body {
+    font-family: "Open Sans", Arial;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    border: 1px solid rgb(200, 200, 204);
+    height: 40px;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+.nav-link:hover {
+    background-color: rgb(200, 200, 204);
+}
+
+header {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+section *:not(header) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 50px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    #navbar {
+        position: relative; /* Reset position for smaller screens */
+        width: 100%;
+        height: auto; /* Adjust height to auto */
+        border-right: none;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+}
+
+#Reference-link {
+    margin-left: 0;
+}
+
+#Reference-link:hover {
+    color: rgb(209, 124, 198);
+}

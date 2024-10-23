@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="navigation">
+            <nav id="navbar">
+                <header>C++ Documentation</header>
+                <ul>
+                    <li><a class="nav-link" href="#Introduction_to_C++">Introduction to C++</a></li>
+                    <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+                    <li><a class="nav-link" href="#C++_and_C">C++ and C</a></li>
+                    <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+                    <li><a class="nav-link" href="#Variables">Variables</a></li>
+                    <li><a class="nav-link" href="#Declaring_Variables">Declaring Variables</a></li>
+                    <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+                    <li><a class="nav-link" href="#Constants">Constants</a></li>
+                    <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+                    <li><a class="nav-link" href="#If...else_Statement">If...else Statement</a></li>
+                    <li><a class="nav-link" href="#While_Statement">While Statement</a></li>
+                    <li><a class="nav-link" href="#For_Statement">For Statement</a></li>
+                    <li><a class="nav-link" href="#Function_Declarations">Function Declarations</a></li>
+                    <li><a class="nav-link" href="#References">References</a></li>
+                </ul>
+           </nav>
+        </div>
+        <div id="content">
+            <main id="main-doc">
+                <section class="main-section" id="Introduction_to_C++">
+                    <header>Introduction to C++</header>
+                    <p>C++ is a cross-platform, general-purpose programming language
+                        known for its efficiency and flexibility. It supports various
+                        programming paradigms, including procedural, object-oriented,
+                        and generic programming. C++ is widely used in software development,
+                        systems programming, and game development.</p>
+                    
+                    <p>C++ includes a rich standard library that provides numerous functions
+                        and data structures, such as vectors, lists, and algorithms. It allows
+                        allows for low-level memory manipulation, giving developers control over
+                        hardware resources.</p>
+
+                </section>
+                <section class="main-section" id="What_you_should_already_know">
+                    <header>What you should already know</header>
+                    <p>This guide assumes you have the following basic background:</p>
+                    <ul>
+                        <li>A general understanding of programming concepts.</li>
+                        <li>Good working knowledge of a programming language like C.</li>
+                        <li>Familiarity with basic computer science principles.</li>
+                    </ul>
+
+                </section>
+                <section class="main-section" id="C++_and_C">
+                    <header>C++ and C</header>
+                    <p>C++ is an extension of the C programming language, with added
+                        features for object-oriented programming. It retains much of
+                        the syntax and functionality of C but includes additional
+                        capabilities such as classes, inheritance, and polymorphism.
+                        C++ also supports both high-level and low-level programming,
+                        making it a versatile choice for a wide range of applications.</p>
+
+                </section>
+                <section class="main-section" id="Hello_World">
+                    <header>Hello World</header>
+                    <p>To get started with writing C++, open your favorite text editor
+                    or IDE and write your first "Hello, World!" C++ code:</p>
+
+                    <code>
+                        #include <iostream>
+
+                            int main() {
+                                std::cout << "Hello, World!" << std::endl;
+                                return 0;
+                            }                    
+                    </code>
+
+                    <p>Compile and run the code using a C++ compiler, such as g++.</p>
+
+                </section>
+                <section class="main-section" id="Variables">
+                    <header>Variables</header>
+                    <p>You use variables as symbolic names for values in your application.
+                        The names of variables, called identifiers, conform to certain rules.</p>
+
+                    <p>A C++ identifier must start with a letter or underscore (_); subsequent
+                        characters can also be digits (0-9). C++ is case-sensitive, meaning that
+                        Variable, variable, and VARIABLE are different identifiers.</p>
+
+                </section>
+                <section class="main-section" id="Declaring_Variables">
+                    <header>Declaring Variables</header>
+                    <p>You can declare a variable by specifying its type, followed by its name.
+                        For example:</p>
+
+                    <code>
+                        int x = 42; double y = 13.5; char z = 'A';
+
+                    </code>
+
+                    <p>This syntax can be used to declare both local and global variables.</p>
+
+                </section>
+                <section class="main-section" id="Variable_Scope">
+                    <header>Variable Scope</header>
+                    <p>When you declare a variable outside of any function, it is called a 
+                        global variable, because it is available to any other code in the
+                        current document. When you declare a variable within a function, it
+                        is called a local variable, because it is available only within
+                        that function.</p>
+
+                    <p>C++ also supports block scope, meaning variables declared within a block
+                        (e.g., within curly braces {}) are local to that block.</p>
+
+                    <code>
+                        if (true) {
+                            int x = 5;
+                        }
+                        std::cout << x; // Error: x is not defined in this scope
+                        
+                    </code>
+
+                </section>
+                <section class="main-section" id="Constants">
+                    <header>Constants</header>
+                    <p>You can create a read-only, named constant with the const
+                        keyword. The syntax of a constant identifier is the same
+                        as for a variable identifier:</p>
+
+                    <code>
+                        const double PI = 3.14;
+
+                    </code>
+
+                    <p>A constant cannot change value through assignment or be re-declared
+                        while the program is running. It has to be initialized to a value.</p>
+
+                </section>
+                <section class="main-section" id="Data_Types">
+                    <header>Data Types</header>
+                    <p>C++ has several built-in data types:</p>
+                    <ul>
+                        <li><strong>Basic types:</strong> int, char, float, double</li>
+                        <li><strong>Boolean type:</strong> bool (with values true and false)</li>
+                        <li><strong>Derived types:</strong> array, pointer, reference</li>
+                        <li><strong>User-defined types: </strong>class, struct, union, enum</li>
+                    </ul>
+
+                    <p style="font-size:large;">Example</p>
+
+                    <code>
+                        #int a = 10;
+                        float b = 20.5;
+                        bool c = true;
+                        char d = 'X';
+                    </code>
+
+                </section>
+                <section class="main-section" id="If...else_Statement">
+                    <header>If...else Statement</header>
+                    <p>Use the if statement to execute a statement if a
+                        logical condition is true. Use the optional else
+                        clause to execute a statement if the condition
+                        is false. An if statement looks as follows:</p>
+
+                    <code>
+                        if (condition) {
+                            statement_1;
+                        } else {
+                            statement_2;
+                        }
+                        
+                    </code>
+
+                    <p>You may also compound the statements using else if
+                        to have multiple conditions tested in sequence:</p>
+
+                    <code>
+                        if (condition_1) {
+                            statement_1;
+                        } else if (condition_2) {
+                            statement_2;
+                        } else {
+                            statement_last;
+                        }
+                        
+                    </code>
+                </section>
+                <section class="main-section" id="While_Statement">
+                    <header>While Statement</header>
+                    <p>A while statement executes its statements as long as a
+                        specified condition evaluates to true. A while statement
+                        looks as follows:</p>
+
+                    <code>
+                        while (condition) {
+                            statement;
+                        }
+                        
+                    </code>
+
+                    <p style="font-size: large;">Example:</p>
+                    
+                    <code>
+                        int n = 0;
+                        int x = 0;
+                        while (n < 3) {
+                            n++;
+                            x += n;
+                        }
+
+                    </code>
+
+                    <p>With each iteration, the loop increments n and
+                        adds that value to x.</p>
+
+                </section>
+                <section class="main-section" id="For_Statement">
+                    <header>For Statement</header>
+                    <p>A for statement provides a more concise way to iterate
+                        over a range of values. It looks as follows:</p>
+
+                    <code>
+                        for (initialization; condition; increment) {
+                            statement;
+                        }
+                        
+                    </code>
+
+                    <p style="font-size: large;">Example:</p>
+
+                    <code>
+                        for (int i = 0; i < 5; i++) {
+                            std::cout << i << std::endl;
+                        }                
+                        
+                    </code>
+
+                </section>
+                <section class="main-section" id="Function_Declarations">
+                    <header>Function Declarations</header>
+                    <p>A function definition consists of the function's return type,
+                        the name of the function, a list of arguments to the function,
+                        enclosed in parentheses and separated by commas, and the body
+                        of the function, enclosed in curly braces {}.</p>
+
+                    <p>For example, the following code defines a simple function
+                        named square:</p>
+
+                    <code>
+                        int square(int number) {
+                            return number * number;
+                        }
+                        
+                    </code>
+                    
+                    <p>The function square takes one argument, called number. The
+                        function consists of one statement that says to return
+                        the argument of the function (that is, number) multiplied
+                        by itself. The return statement specifies the value returned
+                        by the function.</p>
+
+                    <code>
+                        return number * number;
+                    </code>
+                </section>
+                <section class="main-section" id="References">
+                    <header>References</header>
+                    <p>All the documentation in this page is taken from <a href="https://chatgpt.com/" id="Reference-link">Open AI</a></p>
+
+                    <p>By understanding these basic concepts and constructs, you'll be
+                        well on your way to mastering C++ programming.</p>
+                </section>
+                
+            </main>
+            </div>
+    </div>
+</body>
+</html>
